@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style type="text/css">
+
+
+        .buttons {
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            line-height: normal;
+            margin: 0 15px;
+            padding: 6px 20px;
+            text-align: center;
+        }
+
+        .button-primary {
+            background-color: #ffcb00;
+            border: 1px solid #ffcb00;
+            color: #000;
+            min-width: 150px;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+        }
+
+        .button-primary:hover {
+            background-color: #a6ce39;
+            border: 1px solid #a6ce39;
+        }
+
+        .button-primary:focus {
+            background-color: #a6ce39;
+            border-color: #a6ce39;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75) inset;
+            color: #000;
+            outline: none;
+        }
+
+        .field-value .buttons {
+            margin-top: -6px;
+        }
+    </style>
+
+    <style type="text/css">
+
+        .table th:first-child {
+            border-radius: 5px 0 0 0;
+        }
+
+        .table th:last-child {
+            border-radius: 0 5px 0 0;
+        }
+
+        .table td {
+            font-size: 14px;
+            padding: 15px;
+            vertical-align: middle;
+        }
+
+        .table tr:hover td {
+            background: #fff5db;
+            cursor: pointer;
+        }
+
+        .vertical th {
+            border-right: 1px solid #ebebeb;
+        }
+
+        .full th {
+            border-right: 1px solid #ebebeb;
+        }
+
+        .full th:last-child, .vertical th:last-child {
+            border-right: none;
+        }
+
+        .vertical td {
+            border-right: 1px solid #ebebeb;
+        }
+
+        .horizontal td {
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .full td {
+            border-left: 1px solid transparent;
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .full td:last-child, .vertical td:last-child {
+            border-right: none;
+        }</style>
+
+    <style type="text/css">.form-buttons {
+        margin: 10px auto 0;
+        min-height: 30px;
+        padding-bottom: 0;
+        padding-left: 25px;
+        text-align: center;
+    }</style>
+
+
+    <style type="text/css">/* text color*/
+    .green {
+        color: #039035;
+    }
+
+    /* end text color*/
+
+    /* indents */</style>
+
+    <style type="text/css">html, body {
+        height: 100%;
+        margin: 0;
+        min-height: 100%;
+    }
+
+    body {
+        background: #f4f4f4;
+        font-family: Arial, Tahoma;
+        min-width: 960px;
+    }</style>
+
+    <style type="text/css">.full-height {
+        height: 100%;
+        min-height: 100%;
+    }
+
+    </style>
+
+    <style type="text/css">
+
+        .login-layout-footer {
+            margin: 0 auto;
+        }
+
+        .footer {
+            height: 60px;
+            margin:0 auto;
+            min-width: 860px;
+            min-height: 60px;
+            padding: 0 40px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: table;
+            font-size: 12px;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        .copyright {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .footer-center {
+            display: table-cell;
+            vertical-align: middle;
+            width: 28%;
+        }
+
+        .address {
+            display: table-cell;
+            text-align: right;
+            vertical-align: middle;
+        }
+
+        .footer-link {
+            text-decoration: none;
+        }
+    </style>
+
+    <style type="text/css">
+
+        .login-layout {
+            min-height: calc(100% - 60px);
+            background: #ecf3ca url(static/bottom-line.png) no-repeat bottom right;
+        }
+        .fon-logopass {
+            display: table;
+            min-width: 960px;
+            max-width: 1280px;
+            height: 537px;
+            position: relative;
+            width: 100%;
+        }
+        .start-line {
+            background: url(static/center-line.png) repeat-x;
+            display:table-cell;
+            min-width: 386px;
+            max-width: 859px;
+            height: 537px;
+        }
+        .center-line {
+            background: url(static/center-line.png) repeat-x;
+            display:table-cell;
+
+            width: auto;
+            min-width:7px;
+            height: 537px;
+
+        }
+        .end-line {
+            background: url(static/end-line.png) no-repeat top right;
+            width:347px;
+            height: 537px;
+            display: table-cell;
+        }
+        .login-layout-wrapper {
+            margin: 0 auto;
+            padding-top: 34px;
+            min-width: 960px;
+            max-width: 1280px
+        }
+
+        .login-layout-wrapper-header {
+            margin-bottom: 20px;
+            margin-left: 105px;
+        }
+
+        .login-logo {
+            background: url(static/logo-rshbins-life.jpg) no-repeat center left;
+            background-size: 362px 66px;
+            cursor: pointer;
+            display: inline-block;
+            height: 66px;
+            margin-right: 95px;
+            vertical-align: top;
+            width: 362px;
+        }
+
+        .login-logo-text {
+            display: inline-block;
+            font-size: 36px;
+            margin-top: 15px;
+            text-transform: uppercase;
+            vertical-align: top;
+        }
+
+        .login-layout-fields {
+            padding: 60px 0 60px 88px;
+            width: 700px;
+            position:absolute;
+            top: 60px;
+        }
+
+        .login-layout-fields .form-buttons {
+            margin-top: 60px;
+            padding-left: 0;
+        }
+
+        .login-layout-fields .button-primary {
+            border-radius: 4px;
+            font-size: 20px;
+            margin: 0;
+            padding: 12px 20px;
+            text-shadow: 0 1px 0 0 rgba(255, 255, 255, .75);
+            width: 385px;
+        }
+
+        .login-layout-footer {
+            margin: 0 auto;
+        }
+        .test-environment-title {
+            color: red
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div id="root" class="full-height">
+    <div data-reactroot="" class="full-height">
+        <div class="full-height">
+            <div class="full-height">
+                <div class="full-height">
+                    <div class="full-height">
+                        <div class="login-layout">
+                            <div class="login-layout-wrapper">
+                                <div class="login-layout-wrapper-header">
+                                    <div class="login-logo"></div>
+                                    <div class="login-logo-text green">Единый портал страховых продуктов<br/> ООО
+                                        «РСХБ-Страхование жизни»<br/>
+                                        <div class="test-environment-title">Учебная среда</div>
+                                    </div>
+                                </div>
+                                <div class="fon-logopass">
+                                    <div class="start-line">
+                                        <img src="static/start-line.png"/>
+                                        <div class="login-layout-fields">
+                                            <div class="form field-columns-1" data-id="login-form">
+                                                <div class="form-buttons">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="https://fosedu.rshbins-life.ru">
+                                                                    <button class="buttons button-primary"
+                                                                            data-id="button-save">
+                                                                        Инвестиционное страхование жизни
+                                                                    </button>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a href="https://fosedu.rshbins-life.ru:444/index.html">
+                                                                    <button class="buttons button-primary"
+                                                                            data-id="button-save">
+                                                                        Медицинское страхование
+                                                                    </button>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="center-line"></div>
+                                    <div class="end-line"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer login-layout-footer">
+                            <div class="footer-content">
+                                <div class="copyright">© 2018 ООО «РСХБ-Страхование жизни»</div>
+                                <div class="footer-center">
+                                    <div><span class="footer-title">Поддержка сотрудников:</span>
+                                        8 (800) 770 77 88
+                                    </div>
+                                </div>
+                                <div class="footer-center">
+                                    <div>
+                                        <span class="footer-title">Продуктовая поддержка: </span><a
+                                            class="footer-link green"
+                                            href="mailto:life@rshb-am.ru">life@rshb-am.ru</a>
+                                    </div>
+                                    <div>
+                                        <span class="footer-title">Техническая поддержка: </span><a
+                                            class="footer-link green"
+                                            href="mailto:foshelp@rshb.life">foshelp@rshb.life</a>
+                                    </div>
+                                </div>
+                                <div class="address"><span class="footer-title">Адрес:</span>
+                                    119034, г. Москва, Гагаринский пер., д.3.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>

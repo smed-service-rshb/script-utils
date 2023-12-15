@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+../_flyway/flyway -configFiles=flyway.conf migrate

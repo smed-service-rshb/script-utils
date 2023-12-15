@@ -1,0 +1,1 @@
+call ../_flyway/flyway -configFiles=flyway.conf migrate

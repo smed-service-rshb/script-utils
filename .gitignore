@@ -1,0 +1,7 @@
+.idea
+/_distrib*
+/api-gateway
+/auth-service
+/common-dict
+/insurance-service
+/web-presentation-app
