@@ -17,30 +17,27 @@ rem Create distrib
 mkdir %DISTRIB_DIR_NAME%
 
 rem Clone repositories
-git clone git@github.com:AlexeySkridlevskiy/SMS_OLD/auth-service.git
+git clone -b %BRANCH_NAME% git@github.com:smed-service-rshb/auth-service.git
 cd auth-service
 git checkout %BRANCH_NAME%
-git reset --hard %AUTH-SERVICE-COMMIT%
 echo auth-service branch/commit: >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse --abbrev-ref HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 echo . >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 cd ..
 
-git clone git@github.com:AlexeySkridlevskiy/SMS_OLD/api-gateway.git
+git clone -b %BRANCH_NAME% git@github.com:smed-service-rshb/api-gateway.git
 cd api-gateway
 git checkout %BRANCH_NAME%
-git reset --hard %API-GATEWAY-COMMIT%
 echo api-gateway branch/commit: >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse --abbrev-ref HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 echo . >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 cd ..
 
-git clone git@github.com:AlexeySkridlevskiy/SMS_OLD/insurance-service.git
+git clone -b %BRANCH_NAME% git@github.com:smed-service-rshb/insurance-service.git
 cd insurance-service
 git checkout %BRANCH_NAME%
-git reset --hard %INSURANCE-SERVICE-COMMIT%
 echo insurance-service branch/commit: >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse --abbrev-ref HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
@@ -48,7 +45,7 @@ echo . >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 cd ..
 
 rem Делаем запрос только последнего коммита, чтобы не ждать загрузки всего репозитория
-git clone --branch %BRANCH_NAME% --depth 1 git@github.com:AlexeySkridlevskiy/SMS_OLD/common-dict.git
+git clone -b %BRANCH_NAME% git@github.com:smed-service-rshb/common-dict.git
 cd common-dict
 git checkout %BRANCH_NAME%
 echo common-dict branch/commit: >> ../%DISTRIB_DIR_NAME%/release_notes.txt
@@ -57,10 +54,9 @@ git rev-parse HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 echo . >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 cd ..
 
-git clone git@github.com:AlexeySkridlevskiy/SMS_OLD/web-presentation-app.git
+git clone -b %BRANCH_NAME% git@github.com:smed-service-rshb/web-presentation-app.git
 cd web-presentation-app
 git checkout %BRANCH_NAME%--hard %WEB-PRESENTATION-APP-COMMIT%
-git reset
 echo web-presentation-app branch/commit: >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse --abbrev-ref HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
