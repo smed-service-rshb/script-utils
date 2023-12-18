@@ -11,4 +11,6 @@ var content = new String(Files.readAllBytes(path), charset);
 content = content.replaceAll("\"%EFR_BACKEND_PROTOCOL%\"", "window.location.protocol.substr(0,window.location.protocol.length-1)");
 content = content.replaceAll("\"%EFR_BACKEND_HOST%\"", "window.location.hostname");
 content = content.replaceAll("%EFR_BACKEND_PORT%", "window.location.port");
+content = content.replaceAll("%EFR_BACKEND_BASE_PATH%", "/efrapi");
+content = content.replaceAll("%EFR_BACKEND_TIMEOUT%", "50000");
 Files.write(path, content.getBytes(charset));
