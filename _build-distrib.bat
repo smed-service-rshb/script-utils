@@ -69,13 +69,13 @@ echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\auth-service\activemq-transport.p
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\auth-service\hibernate.properties auth-service-app\src\main\resources /Y
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\auth-service\update.properties auth-service-app\src\main\resources /Y
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\auth-service\efr-logging.properties auth-service-app\src\main\resources /Y
-call mvn clean package
+call mvn clean package -DskipTests -Djacoco.skip=true -Dmaven.javadoc.skip=true
 cd ..
 
 cd api-gateway
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\api-gateway\activemq-transport.properties app\src\main\resources /Y
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\api-gateway\jboss-web.xml app\src\main\webapp\WEB-INF /Y
-call mvn clean package
+call mvn clean package -DskipTests -Djacoco.skip=true -Dmaven.javadoc.skip=true
 cd ..
 
 cd insurance-service
@@ -83,7 +83,7 @@ echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\insurance-service\activemq-transp
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\insurance-service\hibernate.properties insurance-service-app\src\main\resources /Y
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\insurance-service\application.properties insurance-service-app\src\main\resources /Y
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\insurance-service\efr-logging.properties insurance-service-app\src\main\resources /Y
-call mvn clean package
+call mvn clean package -DskipTests -Djacoco.skip=true -Dmaven.javadoc.skip=true
 cd ..
 
 cd common-dict
@@ -91,7 +91,7 @@ echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\common-dict\activemq-transport.pr
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\common-dict\hibernate.properties common-dict-app\src\main\resources /Y
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\common-dict\dict-update.properties common-dict-app\src\main\resources /Y
 echo D|xcopy %SETTINGS_DIR%\%WAR_SETTINGS_DIR%\common-dict\efr-logging.properties common-dict-app\src\main\resources /Y
-call mvn clean package
+call mvn clean package -DskipTests -Djacoco.skip=true -Dmaven.javadoc.skip=true
 cd ..
 
 cd web-presentation-app
