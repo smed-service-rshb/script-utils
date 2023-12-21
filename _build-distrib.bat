@@ -56,7 +56,7 @@ cd ..
 
 git clone -b %BRANCH_NAME% git@github.com:smed-service-rshb/web-presentation-app.git
 cd web-presentation-app
-git checkout %BRANCH_NAME%--hard %WEB-PRESENTATION-APP-COMMIT%
+git checkout %BRANCH_NAME%
 echo web-presentation-app branch/commit: >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse --abbrev-ref HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
 git rev-parse HEAD >> ../%DISTRIB_DIR_NAME%/release_notes.txt
